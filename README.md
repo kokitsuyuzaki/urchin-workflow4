@@ -39,7 +39,8 @@ snakemake -s workflow/qc.smk -j 4 --use-singularity
 snakemake -s workflow/index.smk -j 4 --use-singularity
 snakemake -s workflow/quantification.smk -j 4 --use-singularity
 snakemake -s workflow/summary.smk -j 4 --use-singularity
-# Copy XXXXX from urchin-workflow3 and then...
+# Copy output/hpbase/cont-48h/seurat_annotated.RData
+# from urchin-workflow3 and then...
 snakemake -s workflow/deconvolution.smk -j 4 --use-singularity
 ```
 
@@ -51,7 +52,8 @@ snakemake -s workflow/qc.smk -j 32 --cluster qsub --latency-wait 600 --use-singu
 snakemake -s workflow/index.smk -j 32 --cluster qsub --latency-wait 600 --use-singularity
 snakemake -s workflow/quantification.smk -j 32 --cluster qsub --latency-wait 600 --use-singularity
 snakemake -s workflow/summary.smk -j 32 --cluster qsub --latency-wait 600 --use-singularity
-# Copy XXXXX from urchin-workflow3 and then...
+# Copy output/hpbase/cont-48h/seurat_annotated.RData
+# from urchin-workflow3 and then...
 snakemake -s workflow/deconvolution.smk -j 32 --cluster qsub --latency-wait 600 --use-singularity
 ```
 
@@ -63,7 +65,8 @@ snakemake -s workflow/qc.smk -j 32 --cluster sbatch --latency-wait 600 --use-sin
 snakemake -s workflow/index.smk -j 32 --cluster sbatch --latency-wait 600 --use-singularity
 snakemake -s workflow/quantification.smk -j 32 --cluster sbatch --latency-wait 600 --use-singularity
 snakemake -s workflow/summary.smk -j 32 --cluster sbatch --latency-wait 600 --use-singularity
-# Copy XXXXX from urchin-workflow3 and then...
+# Copy output/hpbase/cont-48h/seurat_annotated.RData
+# from urchin-workflow3 and then...
 snakemake -s workflow/deconvolution.smk -j 32 --cluster sbatch --latency-wait 600 --use-singularity
 ```
 
