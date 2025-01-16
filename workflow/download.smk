@@ -35,7 +35,7 @@ rule download_macrogen:
         'data/{sample}_1.fastq.gz',
         'data/{sample}_2.fastq.gz'
     resources:
-        mem_gb=100
+        mem_mb=1000000
     benchmark:
         'benchmarks/download_{sample}.txt'
     log:
@@ -47,7 +47,7 @@ rule download_hpbase:
     output:
         'data/hpbase/{file}'
     resources:
-        mem_gb=100
+        mem_mb=1000000
     benchmark:
         'benchmarks/download_hpbase_{file}.txt'
     log:
@@ -59,7 +59,7 @@ rule download_adapter:
     output:
         'data/all_sequencing_WTA_adopters.fa'
     resources:
-        mem_gb=100
+        mem_mb=1000000
     benchmark:
         'benchmarks/download_adapter.txt'
     log:

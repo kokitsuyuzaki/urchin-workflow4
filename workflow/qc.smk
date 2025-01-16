@@ -37,7 +37,7 @@ rule trimmomatic:
         'data/{sample}_2_unpaired.fastq.gz',
         'data/trim/{sample}/trim_out.log'
     resources:
-        mem_gb=100
+        mem_mb=1000000
     benchmark:
         'benchmarks/trimmomatic_{sample}.txt'
     log:
@@ -51,7 +51,7 @@ rule fastqc_trim_1:
     output:
         'data/{db}/trim/{sample}_1/fastqc/{sample}_1_paired_fastqc.html'
     resources:
-        mem_gb=100
+        mem_mb=1000000
     benchmark:
         'benchmarks/fastqc_trim_1_{db}_{sample}.txt'
     log:
@@ -65,7 +65,7 @@ rule fastqc_trim_2:
     output:
         'data/{db}/trim/{sample}_2/fastqc/{sample}_2_paired_fastqc.html'
     resources:
-        mem_gb=100
+        mem_mb=1000000
     benchmark:
         'benchmarks/fastqc_trim_2_{db}_{sample}.txt'
     log:
@@ -79,7 +79,7 @@ rule fastqc_raw_1:
     output:
         'data/{db}/raw/{sample}_1/fastqc/{sample}_1_fastqc.html'
     resources:
-        mem_gb=100
+        mem_mb=1000000
     benchmark:
         'benchmarks/fastqc_raw_1_{db}_{sample}.txt'
     log:
@@ -93,7 +93,7 @@ rule fastqc_raw_2:
     output:
         'data/{db}/raw/{sample}_2/fastqc/{sample}_2_fastqc.html'
     resources:
-        mem_gb=100
+        mem_mb=1000000
     benchmark:
         'benchmarks/fastqc_raw_2_{db}_{sample}.txt'
     log:

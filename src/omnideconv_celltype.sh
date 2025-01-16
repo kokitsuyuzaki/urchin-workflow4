@@ -10,8 +10,8 @@
 #SBATCH -p node03-06
 SLURM_RESTART_COUNT=2
 
-Rscript src/report.R $@
+Rscript src/omnideconv_celltype.R $@
 
 if [ $? -ne 0 ]; then
-    touch $2
+    touch $3
 fi

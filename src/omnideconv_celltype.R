@@ -13,10 +13,10 @@ load(infile1)
 bulk.data <- as.matrix(read.csv(infile2, header=TRUE, row.names=1))
 
 # Seurat => Matrix
-sc.data <- as.matrix(seurat.integrated@assays$RNA$counts)
+sc.data <- as.matrix(seurat.obj@assays$RNA$counts)
 
 # 細胞型ラベル
-cell.type.annotations <- seurat.integrated$celltype
+cell.type.annotations <- seurat.obj$celltype
 
 # バッチID（SCDEの場合のみ）
 batch.ids <- rep("Batch1", ncol(sc.data))

@@ -10,4 +10,8 @@
 #SBATCH -p node03-06
 SLURM_RESTART_COUNT=2
 
-Rscript src/omnideconv.R $@
+Rscript src/omnideconv_cluster.R $@
+
+if [ $? -ne 0 ]; then
+    touch $3
+fi

@@ -33,7 +33,7 @@ rule star_raw:
     output:
         'data/{db1}/raw/{sample}/star/Aligned.out.sam'
     resources:
-        mem_gb=100
+        mem_mb=1000000
     benchmark:
         'benchmarks/star_raw_{db1}_{sample}.txt'
     log:
@@ -49,7 +49,7 @@ rule star_trim:
     output:
         'data/{db1}/trim/{sample}/star/Aligned.out.sam'
     resources:
-        mem_gb=100
+        mem_mb=1000000
     benchmark:
         'benchmarks/star_trim_{db1}_{sample}.txt'
     log:
@@ -63,7 +63,7 @@ rule featurecounts:
     output:
         'data/{db1}/{type}/{sample}/featurecounts/featurecounts.summary'
     resources:
-        mem_gb=100
+        mem_mb=1000000
     benchmark:
         'benchmarks/featurecounts_{db1}_{type}_{sample}.txt'
     log:
@@ -82,7 +82,7 @@ rule salmon_count_raw:
     output:
         'data/{db2}/raw/{sample}/salmon/quant.sf'
     resources:
-        mem_gb=100
+        mem_mb=1000000
     benchmark:
         'benchmarks/salmon_count_{db2}_raw_{sample}.txt'
     log:
@@ -98,7 +98,7 @@ rule salmon_count_trim:
     output:
         'data/{db2}/trim/{sample}/salmon/quant.sf'
     resources:
-        mem_gb=100
+        mem_mb=1000000
     benchmark:
         'benchmarks/salmon_count_{db2}_trim_{sample}.txt'
     log:

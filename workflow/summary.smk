@@ -44,7 +44,7 @@ rule multiqc:
     output:
         'data/{db1}/{type}/multiqc_report.html'
     resources:
-        mem_gb=100
+        mem_mb=1000000
     container:
         'docker://quay.io/biocontainers/multiqc:1.12--pyhdfd78af_0'
     benchmark:
@@ -60,7 +60,7 @@ rule export_mapping_rate:
     output:
         'data/{db1}/{type}/mapping_rate.txt'
     resources:
-        mem_gb=100
+        mem_mb=1000000
     container:
         'docker://quay.io/biocontainers/multiqc:1.12--pyhdfd78af_0'
     benchmark:
@@ -77,7 +77,7 @@ rule featurecounts_merge:
     output:
         'output/FeatureCounts_{db1}_{type}.txt'
     resources:
-        mem_gb=100
+        mem_mb=1000000
     container:
         'docker://koki/urchin_workflow_bioconda:20220527'
     benchmark:
@@ -95,7 +95,7 @@ rule tximport:
         'output/SalmonCounts_{db2}_{type}.txt',
         'output/SalmonTPMs_{db2}_{type}.txt'
     resources:
-        mem_gb=100
+        mem_mb=1000000
     container:
         'docker://koki/urchin_workflow_r:20220531'
     benchmark:
